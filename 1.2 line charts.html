@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"></script>
+
+<canvas id="myChart"></canvas>
+
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels:['January','February','March','April','May','June','July','August','September','October','November','December'],
+            datasets:[{
+                data:[23, 40, 72, 90, 120, 95, 100, 130, 150, 206, 89, 70],
+                label:'Adults 18+',
+                borderColor:'rgba(120,120,255,1)'
+            },{
+                data:[56,75,113,116,190,45,20,30,60,34,70,190],
+                label:'Children 0-18',
+                borderColor:'rgba(70,200,20,1)'
+            },{
+                data:[12,14,25,83,100,50,34,45,23,45,10,20],
+                label:'Cats',
+                borderColor:'rgba(170,70,20,1)'
+            },{
+                data:[20,30,45,34,14,57,34,35,23,75,13,27],
+                label:'Dogs',
+                borderColor:'rgb(246,231,46)'
+            }]
+        },
+        options:{
+            plugins:{
+                title:{
+                    display: true,
+                    text: 'Death From Choking On Key Caps'
+                },
+                legend:{
+                    position:'left'
+                }
+            }
+        }
+    });
+</script>
+
+<canvas id='myChart2'></canvas>
+
+<script>
+    var cty = document.getElementById('myChart2');
+    var nextChart = new Chart(cty, {
+        type: 'scatter',
+        data: {
+            datasets:[{
+                label:'Amongus KDR',
+                backgroundColor:'rgb(255,20,0)',
+                pointBackgroundColor:'rgb(255,20,0)',
+                pointRadius: 4,
+                data: [
+                    {x:5, y:10},
+                    {x:11, y:25},
+                    {x:15, y:25},
+                    {x:7, y:20},
+                    {x:31, y:20},
+                    {x:5, y:21},
+                    {x:7, y:0},
+                    {x:1, y:56},
+                ]
+            },{
+                    label:'Fall Guys KDR',
+                    backgroundColor:'rgb(239,40,142)',
+                    pointBackgroundColor:'rgb(239,40,142)',
+                    pointRadius: 4,
+                    data: [
+                        {x:3, y:1},
+                        {x:16, y:15},
+                        {x:13, y:2},
+                        {x:4, y:5},
+                        {x:6, y:1},
+                        {x:13, y:21},
+                        {x:19, y:1},
+                        {x:1, y:25}
+                    ]
+                },{
+                label:'Fortnite KDR',
+                backgroundColor:'rgb(71,163,245)',
+                pointBackgroundColor:'rgb(71,163,245)',
+                pointRadius: 4,
+                data: [
+                    {x:0, y:12},
+                    {x:10, y:6},
+                    {x:1, y:2},
+                    {x:4, y:7},
+                    {x:4, y:9},
+                    {x:13, y:41},
+                    {x:69, y:1},
+                    {x:11, y:25},
+                    {x:9, y:1},
+                    {x:61, y:65}
+                ]
+            },{
+                label:'Clash Royale KDR',
+                backgroundColor:'rgb(248,217,15)',
+                pointBackgroundColor:'rgb(248,217,15)',
+                pointRadius: 4,
+                data: [
+                    {x:2, y:32},
+                    {x:40, y:36},
+                    {x:14, y:24},
+                    {x:42, y:45},
+                    {x:44, y:39},
+                    {x:43, y:41},
+                    {x:29, y:11},
+                    {x:31, y:22},
+                    {x:19, y:1},
+                    {x:11, y:6}
+            ]}
+            ]
+        },
+        options:{
+            scales:{
+                xAxis: {
+                    beginAtZero: true
+                },
+                yAxis: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'sales'
+                }
+            }
+        }
+    });
+</script>
+
+
+
+</body>
+</html>
