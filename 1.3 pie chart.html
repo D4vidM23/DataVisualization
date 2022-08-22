@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"
+        integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+</script>
+<div style="width:400px">
+    <canvas id="myChart"></canvas></div>
+<script>
+    var ctx=document.getElementById('myChart');
+    var myChart=new Chart(ctx,{
+        type:'doughnut',
+        data:{
+            labels:['a','b','c','d','f','expelled'],
+            datasets:[{
+                label:'My last Doughnut Today',
+                data:[54,93,109,134,230,87],
+                backgroundColor:[
+                    'rgb(33,77,224)',
+                    'rgb(48,189,31)',
+                    'rgb(229,214,36)',
+                    'rgb(231,110,11)',
+                    'rgb(255,20,0)',
+                    'rgb(119,20,11)',
+                ],
+                hoverOffset:1
+            }]
+        }
+    });
+</script>
+<div style="width:400px">
+    <canvas id="myChart2"></canvas></div>
+<script>
+    var cty=document.getElementById('myChart2');
+    var myChart=new Chart(cty,{
+        type:'pie',
+        data:{
+            labels:['bears','coyotes','wolves','deer','moose','squirrels'],
+            datasets:[{
+                label:'Animals In Forest',
+                data:[92,200,192,1302,546,3402],
+                backgroundColor:[
+                    'rgb(140,85,55)',
+                    'rgb(175,160,121)',
+                    'rgb(169,174,197)',
+                    'rgb(245,169,81)',
+                    'rgb(105,91,68)',
+                    'rgb(227,198,151)',
+                ],
+                hoverOffset:1
+            }]
+        }
+    });
+</script>
+
+<div style="width:400px">
+<canvas id="myChart3"></canvas></div>
+<script>
+    var ctz=document.getElementById('myChart3');
+    var myChart=new Chart(ctz,{
+        type:'polarArea',
+        data:{
+            labels:['homeless','broke','fine','decent','wealthy','superrich','kings','vik van goh'],
+            datasets:[{
+                label:'population in ancient rome',
+                data: [19,18,12,10,6,5,2,1],
+                backgroundColor:[
+                    'rgb(36,105,69)',
+                    'rgb(60,164,112)',
+                    'rgb(225,196,55)',
+                    'rgb(245,224,153)',
+                    'rgb(150,50,208)',
+                    'rgb(36,156,241)',
+                    'rgb(50,203,208)',
+                    'rgb(252,38,0)',
+
+                ]
+            }]
+        },
+    });
+</script>
+</body>
+</html>
